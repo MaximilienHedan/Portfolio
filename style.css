@@ -112,6 +112,7 @@ body {
   border-radius: 50%;
   border: .25rem solid var(--main-color);
   margin-bottom: .8rem;
+  background: var(--cover-color);
 }
 
 .profile-page h1 {
