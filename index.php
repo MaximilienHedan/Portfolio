@@ -38,7 +38,7 @@
 
                     <div class="btn-box">
                         <!-- <a href="#" class="btn">Télécharger CV</a> -->
-                        <a href="#" class="btn contact-me">Mes coordonées</a>
+                        <a href="#" class="btn contact-me">Me contacter</a>
                     </div>
                 </div>   
             </div>
@@ -229,7 +229,7 @@
                                 <!-- <a href="#">Live Preview<i class='bx bx-link-external'></i></a> -->
                             </div>
                             <p>Techno utilisées:</p>
-                            <p>Le CV en ligne sur lequel vous-vous trouvez à été réalisé en HTML, CSS et JavaScript avec l'aide majeure d'un support vidéo et des modifications personnelles que j'ai pu apporter,
+                            <p>Le CV en ligne sur lequel vous-vous trouvez à été réalisé en HTML, CSS et JavaScript et ce, grâce à un support vidéo en plus des modifications personnelles que j'ai pu apporter,
                                 dans le but pratiquer mes compétences de développeur Front-End.</p>
                         </div>    
     
@@ -248,17 +248,33 @@
                 </div>
 
                 <div class="page-back">
-                    <h2 class="title">Mes coordonées</h2>
+                    <h2 class="title">Me contacter</h2>
 
-                    <!-- <div class="contact-box">
-                        <form action="#">
-                            <input type="email" class="field" placeholder="Mail" required>
-                            <input type="text" class="field" placeholder="Sujet" required>
-                            <textarea name="" id="" cols="30" rows="10" class="field" placeholder="Votre message" required></textarea>
+                    <div class="contact-box">
+                        <form action="" method="post" target="index.php">
+                            <input type="text" name="nom" class="field" placeholder="nom" required>
+                            <input type="email" name="email" class="field" placeholder="mail" required>
+                            <input type="text" name="sujet" class="field" placeholder="sujet" required>
+                            <textarea name="message" cols="30" rows="8" class="field" placeholder="Votre message" required></textarea>
                             <input type="submit" class="btn" value="Envoyer">  
                         </form>
-                    </div> -->
+                        
+                        <?php
+                            if (isset($_POST["message"]) && !empty($_POST["message"])){
+                                $message = "Ce message vous a été envoyé via la page contact du site maximilienhedan.fr
+                                Nom : " . $_POST["nom"] . "
+                                Email : " . $_POST["email"] . "
+                                Message : " . $_POST["message"];
+                                
+                                $mail = mail("maximilien.hedan@gmail.com", $_POST["sujet"], $message, "From:contact@maximilienhedan.fr". "\r\n" . "Reply-to:" . $_POST["email"]);
 
+                                // header('Location: index.php');
+                                // exit();
+                            }
+                        ?>
+                                    
+                    </div> 
+                
                     <span class="number-page">6</span>
 
                     <span class="nextprev-btn back" data-page="turn-3">
