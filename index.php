@@ -239,7 +239,6 @@
                         </div>
                     </div>
 
-
                     <span class="number-page">5</span>
 
                     <span class="nextprev-btn" data-page="turn-3">
@@ -252,7 +251,6 @@
 
                     <div class="contact-box">
                         <form action="" method="post" target="index.php">
-                            <input type="text" name="nom" class="field" placeholder="nom" required>
                             <input type="email" name="email" class="field" placeholder="mail" required>
                             <input type="text" name="sujet" class="field" placeholder="sujet" required>
                             <textarea name="message" cols="30" rows="8" class="field" placeholder="Votre message" required></textarea>
@@ -262,11 +260,10 @@
                         <?php
                             if (isset($_POST["message"]) && !empty($_POST["message"])){
                                 $message = "Ce message vous a été envoyé via la page contact du site maximilienhedan.fr
-                                Nom : " . $_POST["nom"] . "
                                 Email : " . $_POST["email"] . "
                                 Message : " . $_POST["message"];
                                 
-                                $mail = mail("maximilien.hedan@gmail.com", $_POST["sujet"], $message, "From:contact@maximilienhedan.fr". "\r\n" . "Reply-to:" . $_POST["email"]);
+                                $mail = mail("max_jl@hotmail.com", $_POST["sujet"], $message, "From:contact@maximilienhedan.fr". "\r\n" . "Reply-to:" . $_POST["email"]);
 
                                 // header('Location: index.php');
                                 // exit();
@@ -282,7 +279,7 @@
                     </span>
 
                     <a href="#" class="back-profile">
-                        <p>Profile</p>
+                        <p>Profil</p>
                         <i class='bx bxs-user'></i>
                     </a>
 
