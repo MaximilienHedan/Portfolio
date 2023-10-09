@@ -11,9 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
-    
-           
+<body> 
     <div class="wrapper">
         <div class="cover cover-left"></div>
         <div class="cover cover-right"></div>
@@ -25,13 +23,6 @@
                     <img src="c3452a9a7f1434fa78c3cbc96728da32-sticker.png" alt="">
                     <h1>Maximilien Hédan</h1>
                     <h3>Concepteur Développeur</h3>
-
-                    <div class="social-media">
-                        <a target="_blank" href="https://www.facebook.com/maximilien.hedan/"><i class='bx bxl-facebook'></i></a>
-                        <a target="_blank" href="https://twitter.com/Reivaks_"><i class='bx bxl-twitter' ></i></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/maximilien-hédan-508b01105"><i class='bx bxl-linkedin' ></i></a>
-                        <a target="_blank" href="https://www.instagram.com/max.hdn/"><i class='bx bxl-instagram-alt' ></i></a>
-                    </div>
 
                     <p>Bonjour et bienvenue sur mon CV en ligne. Ce projet à pour objectif 
                         de m'entrainer et d'améliorer mes compétences en matière de développement web afin de pouvoir passer de développeur Back-end à développeur Front-End.</p>
@@ -248,29 +239,15 @@
 
                 <div class="page-back">
                     <h2 class="title">Me contacter</h2>
-
-                    <div class="contact-box">
-                        <form action="" method="post" target="index.php">
-                            <input type="email" name="email" class="field" placeholder="mail" required>
-                            <input type="text" name="sujet" class="field" placeholder="sujet" required>
-                            <textarea name="message" cols="30" rows="8" class="field" placeholder="Votre message" required></textarea>
-                            <input type="submit" class="btn" value="Envoyer">  
-                        </form>
-                        
-                        <?php
-                            if (isset($_POST["message"]) && !empty($_POST["message"])){
-                                $message = "Ce message vous a été envoyé via la page contact du site maximilienhedan.fr
-                                Email : " . $_POST["email"] . "
-                                Message : " . $_POST["message"];
-                                
-                                $mail = mail("max_jl@hotmail.com", $_POST["sujet"], $message, "From:contact@maximilienhedan.fr". "\r\n" . "Reply-to:" . $_POST["email"]);
-
-                                // header('Location: index.php');
-                                // exit();
-                            }
-                        ?>
-                                    
-                    </div> 
+                    
+                    <div class="social-media">
+                        <a href="#" id="mail"><i class='bx bx-envelope'></i><p id="email">maximilien.hedan@gmail.com</p></a>
+                        <a href="#"><i class='bx bx-mobile'></i><p>+33781645363</p></a>
+                        <a target="_blank" href="https://www.facebook.com/maximilien.hedan/"><i class='bx bxl-facebook'></i><p>Facebook</p></a>
+                        <a target="_blank" href="https://twitter.com/Reivaks_"><i class='bx bxl-twitter' ></i><p>Twitter / X</p></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/maximilien-hédan-508b01105"><i class='bx bxl-linkedin' ></i><p>LinkedIn</p></a>
+                        <a target="_blank" href="https://www.instagram.com/max.hdn/"><i class='bx bxl-instagram-alt' ></i><p>Instagram</p></a>
+                    </div>
                 
                     <span class="number-page">6</span>
 
@@ -283,6 +260,7 @@
                         <i class='bx bxs-user'></i>
                     </a>
 
+                    
                 </div>
             </div>
         </div>

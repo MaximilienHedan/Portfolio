@@ -125,33 +125,10 @@ body {
   color: var(--main-color);
 }
 
-.profile-page .social-media {
-  margin: .6rem 0 .8rem;
-}
-
-.profile-page .social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: transparent;
-  border: var(--border);
-  border-radius: 50%;
-  font-size: 1.3rem;
-  color: var(--main-color);
-  margin: 0 .2rem;
-  transition: .5s;
-}
-
-.profile-page .social-media a:hover {
-  background: var(--main-color);
-  color: var(--white-color);
-}
 
 .profile-page p {
   text-align: justify;
-
+  margin: 2rem;
 }
 
 .profile-page .btn-box {
@@ -230,8 +207,6 @@ body {
   border-left: var(--border);
 
 }
-
-
 
 .workeduc-box .workeduc-content {
   position: relative;
@@ -386,41 +361,61 @@ body {
   color: var(--main-color);
 }
 
-
-
-/* .hobbies-content .content span #external_icon{
-  height: 12px;
-  width: 12px;
-} */
-
-.contact-box{
-  text-align: center;
+.social-media {
+  margin: 4.5rem 0 .8rem;
+  border-left: var(--border);
 }
 
-.contact-box .field {
-  width: 100%;
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   border: var(--border);
-  border-radius: .3rem;
-  padding: .8rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: var(--main-color);
+  margin: 0 .2rem 1.5rem;
+  transition: .5s;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+.social-media a p {
+  position: absolute;
+  left: 12%;
+  transform: translateX(5%) scale(.5);
   font-size: 1rem;
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
+  color: var(--main-color);
+  opacity: 0;
+  transition: .5s;
 }
 
-.contact-box .field::placeholder {
-  color: var(--text-color);
+.social-media .mail p {
+  position: absolute;
+  left: -5%;
+  transform: translateX(5%) scale(.5);
+  font-size: 1rem;
+  color: var(--main-color);
+  opacity: 0;
+  transition: .5s;
 }
 
-.contact-box textarea {
-  resize: none;
-  height: 15rem;
-
+.social-media .mail:hover p {
+  opacity: 1;
+  transform: translateX(70%) scale(1.5);
 }
 
-.contact-box .btn {
-  cursor: pointer;  
+.social-media a:hover p {
+  opacity: 1;
+  transform: translateX(70%) scale(1.5);
 }
+
 
 .back-profile {
   position: absolute;

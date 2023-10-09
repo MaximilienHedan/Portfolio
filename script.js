@@ -100,3 +100,18 @@ pages.forEach((_, index) => {
         }, 500)
     }, (index + 1) * 200 + 2100)
 })
+
+//copy text to clipboard
+var copymail = document.getElementById("mail");
+var tooltipemail = document.getElementById("email");
+
+copymail.onclick = () => {
+    navigator.clipboard.writeText("maximilien.hedan@gmail.com");
+    tooltipemail.style.left = '10%';
+    tooltipemail.innerHTML = "Email copié !";
+}
+
+copymail.onmousemove = () => {
+    tooltipemail.style.left = '-5%';
+    tooltipemail.innerHTML = "maximilien.hedan@gmail.com";
+}
